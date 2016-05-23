@@ -7,6 +7,7 @@
   display: -webkit-flex;
   display: flex;  
   
+  -moz-flex-flow: $direction $wrap;
   -webkit-flex-flow: $direction $wrap;
   flex-flow: $direction $wrap;
 }
@@ -19,6 +20,7 @@
 
 @mixin font-stroke {
    -webkit-text-stroke: 2px black;
+   -moz-text-stroke: 2px black;
    color: white;
 }
 
@@ -38,12 +40,12 @@ html, body {
   flex: 1 100%;
 }
 
-.top {
-  background-color: white;
+.panel-top {
+  @include flex-box(row, nowrap);
   flex: 3 auto;
 }
 
-.bot {
+.panel-bot {
   @include flex-box(row, nowrap);
 
   -webkit-justify-content: space-between;
@@ -108,9 +110,20 @@ html, body {
   }
 }
 
+.sidepanel-left {
+  background-color: blue;
+  flex: 1 auto;
+}
 
+.sidepanel-right {
+  background-color: red;
+  flex: 1 auto;
+}
 
-
+.game-board {
+  background-color: black;
+  flex: 4 auto;
+}
 
 
 

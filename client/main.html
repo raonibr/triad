@@ -1,12 +1,17 @@
 <head>
-  <title>simple</title>
+  <title>Triad</title>
 </head>
 
 <body>
   <div class="wrapper">  
-    <div class="top">
+
+    <div class="panel-top">
+      {{> sidepanel_left}}
+      {{> game_board}}
+      {{> sidepanel_right}}
     </div>
-    <div class="bot">
+
+    <div class="panel-bot">
       {{> hand_card}}
       {{> hand_card}}
       {{> hand_card}}
@@ -14,6 +19,7 @@
       {{> hand_card}}
       {{> hand_card}}
     </div>
+
   </div>
 </body>
 
@@ -26,4 +32,16 @@
       <div class="right-stat">A</div>
     </div>
   </div>
+</template>
+
+<template name="game_board">
+  <div class="game-board"></div>
+</template>
+
+<template name="sidepanel_left">
+  <div class="sidepanel-left"></div>
+</template>
+
+<template name="sidepanel_right">
+  <div class="sidepanel-right"></div>
 </template>
