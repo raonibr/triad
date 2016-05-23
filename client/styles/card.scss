@@ -1,4 +1,4 @@
-@import "{}/client/styles/mixins.scss";
+@import "{}/client/styles/_mixins.scss";
 
 .hand-card-slot {
   @include flex-box(row, nowrap);
