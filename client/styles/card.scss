@@ -10,7 +10,7 @@
   @include flex-box(row, nowrap);
   @include cast-shadow;
   @include transition(0.1s, ease);
-  border: 6px solid #624063;
+  border: 6px solid black;
 
   flex: 1 auto;
   border-radius: 15px;
@@ -64,12 +64,19 @@
   }
 }
 
-.card-slot {
+.board-card-slot {
+  @include flex-box(row, nowrap);
   @include transition(0.5s, ease);
-  background-color: blue;
+  padding: 10px;
   flex: 1 auto;
 }
 
-.card-slot:hover {
-  background-color: black;
+.board-card-wrapper {
+  @include flex-box(row, nowrap);
+  @include transition(0.1s, ease);
+  border: 3px dashed black;
+  padding: 3px;
+
+  flex: 1 auto;
+  border-radius: 15px;
 }

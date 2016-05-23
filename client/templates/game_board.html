@@ -3,8 +3,10 @@
     {{#each board_columns}}
       <div class="board-row">
         {{#each board_rows}}
-          <div class="board-cell">
-            <div class="card-slot"></div>
+          <div class="board-card-slot">
+            <div class="board-card-wrapper">
+              <div class="board-card-empty"></div>
+            </div>
           </div>
         {{/each}}
       </div>
