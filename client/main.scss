@@ -1,28 +1,5 @@
+@import "{}/client/styles/mixins.scss";
 @import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
-
-@mixin flex-box($direction, $wrap) {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;  
-  
-  -moz-flex-flow: $direction $wrap;
-  -webkit-flex-flow: $direction $wrap;
-  flex-flow: $direction $wrap;
-}
-
-@mixin cast-shadow {
-  -webkit-box-shadow: -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
-  -moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
-  box-shadow:         -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
-}
-
-@mixin font-stroke {
-   -webkit-text-stroke: 2px black;
-   -moz-text-stroke: 2px black;
-   color: white;
-}
 
 html, body {
   padding: 0; 
@@ -36,7 +13,6 @@ html, body {
 }
 
 .wrapper > * {
-  padding: 10px;
   flex: 1 100%;
 }
 
@@ -54,80 +30,29 @@ html, body {
   background-color: white;
   flex: 1 auto;
   cursor: pointer;
-  padding: 10px 5px;
-}
-
-.hand-card-slot {
-  @include flex-box(row, nowrap);
-  @include cast-shadow;
-  border: 6px solid #624063;
-
-  flex: 1 auto;
-  margin: 0px 5px 0px 5px;
-  border-radius: 15px;
-}
-
-.hand-card {
-  background-color: wheat;
-  border-radius: 10px;
-  flex: 1 auto;
-  position: relative;
-
-  .tob-stat, .bot-stat, .right-stat, .left-stat {
-    @include font-stroke;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-  }
-
-  .tob-stat{
-    top: 0px;
-    left: 50%;
-    margin-left: -20px;
-  }
-
-  .bot-stat{
-    bottom: 0px;
-    left: 50%; 
-    margin-left: -20px;
-  }
-
-  .right-stat{
-    right: 0px;
-    top: 50%;
-    margin-top: -20px;
-  }
-
-  .left-stat{
-    left: 0px;
-    top: 50%;
-    margin-top: -20px;
-  }
 }
 
 .sidepanel-left {
-  background-color: blue;
+  background-color: grey;
   flex: 1 auto;
 }
 
 .sidepanel-right {
-  background-color: red;
+  background-color: grey;
   flex: 1 auto;
 }
 
 .game-board {
-  background-color: black;
+  @include flex-box(column, nowrap);
   flex: 4 auto;
 }
 
+.board-row {
+  @include flex-box(row, nowrap);
+  flex: 1 auto; 
+}
 
-
-
-
-
-
+.board-cell {
+  @include flex-box(row, nowrap);
+  flex: 1 auto;
+}

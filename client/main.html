@@ -12,36 +12,10 @@
     </div>
 
     <div class="panel-bot">
-      {{> hand_card}}
-      {{> hand_card}}
-      {{> hand_card}}
-      {{> hand_card}}
-      {{> hand_card}}
-      {{> hand_card}}
+      {{#each hand_cards}}
+        {{> hand_card}}
+      {{/each}}
     </div>
 
   </div>
 </body>
-
-<template name="hand_card">
-  <div class="hand-card-slot">
-    <div class="hand-card">
-      <div class="tob-stat">3</div>
-      <div class="bot-stat">7</div>
-      <div class="left-stat">9</div>
-      <div class="right-stat">A</div>
-    </div>
-  </div>
-</template>
-
-<template name="game_board">
-  <div class="game-board"></div>
-</template>
-
-<template name="sidepanel_left">
-  <div class="sidepanel-left"></div>
-</template>
-
-<template name="sidepanel_right">
-  <div class="sidepanel-right"></div>
-</template>
