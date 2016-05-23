@@ -1,0 +1,64 @@
+@import "{}/client/styles/mixins.scss";
+
+.hand-card-slot {
+  @include flex-box(row, nowrap);
+  @include cast-shadow;
+  border: 6px solid #624063;
+
+  flex: 1 auto;
+  margin: 0px 5px 0px 5px;
+  border-radius: 15px;
+}
+
+.hand-card {
+  background-color: wheat;
+  border-radius: 10px;
+  flex: 1 auto;
+  position: relative;
+
+  .top-stat, .bot-stat, .right-stat, .left-stat {
+    @include font-stroke;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .top-stat{
+    top: 0px;
+    left: 50%;
+    margin-left: -20px;
+  }
+
+  .bot-stat{
+    bottom: 0px;
+    left: 50%; 
+    margin-left: -20px;
+  }
+
+  .right-stat{
+    right: 0px;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  .left-stat{
+    left: 0px;
+    top: 50%;
+    margin-top: -20px;
+  }
+}
+
+.card-slot {
+  @include transition(0.5s, ease);
+  background-color: blue;
+  flex: 1 auto;
+}
+
+.card-slot:hover {
+  background-color: black;
+}

@@ -1,0 +1,13 @@
+<template name="game_board">
+  <div class="game-board">
+    {{#each board_columns}}
+      <div class="board-row">
+        {{#each board_rows}}
+          <div class="board-cell">
+            <div class="card-slot"></div>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</template>

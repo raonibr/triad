@@ -1,0 +1,31 @@
+@mixin flex-box($direction, $wrap) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -moz-flex-flow: $direction $wrap;
+  -webkit-flex-flow: $direction $wrap;
+  flex-flow: $direction $wrap;
+}
+
+@mixin cast-shadow {
+  -webkit-box-shadow: -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
+  -moz-box-shadow:    -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
+  box-shadow:         -3px -1px 5px 0px rgba(50, 50, 50, 0.65);
+}
+
+@mixin font-stroke {
+   -webkit-text-stroke: 2px black;
+   -moz-text-stroke: 2px black;
+   color: white;
+}
+
+@mixin transition($duration, $function) {
+  -webkit-transition: all $duration $function;
+  -moz-transition: all $duration $function;
+  -ms-transition: all $duration $function;
+  -o-transition: all $duration $function;
+  transition: all $duration $function;
+}
