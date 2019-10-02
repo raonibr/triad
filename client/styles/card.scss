@@ -10,8 +10,7 @@
   @include flex-box(row, nowrap);
   @include cast-shadow;
   @include transition(0.1s, ease);
-  border: 6px solid black;
-
+  border: 6px solid #000;
   flex: 1 auto;
   border-radius: 15px;
 }
@@ -40,25 +39,25 @@
   }
 
   .top-stat{
-    top: 0px;
+    top: 0;
     left: 50%;
     margin-left: -20px;
   }
 
   .bot-stat{
-    bottom: 0px;
+    bottom: 0;
     left: 50%; 
     margin-left: -20px;
   }
 
   .right-stat{
-    right: 0px;
+    right: 0;
     top: 50%;
     margin-top: -20px;
   }
 
   .left-stat{
-    left: 0px;
+    left: 0;
     top: 50%;
     margin-top: -20px;
   }
@@ -74,9 +73,8 @@
 .board-card-wrapper {
   @include flex-box(row, nowrap);
   @include transition(0.1s, ease);
-  border: 3px dashed black;
+  border: 3px dashed #000;
   padding: 3px;
-
   flex: 1 auto;
   border-radius: 15px;
 }
